@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:litterflow_app/constants/strings.dart';
 import 'package:litterflow_app/constants/themes.dart';
-import 'package:litterflow_app/logic/cubits/slides_cubit/slides_navigation_cubit.dart';
 import 'package:litterflow_app/presentation/app_router/app_router.dart';
 import 'package:litterflow_app/presentation/screens/splash/splash_screen.dart';
 import 'logic/bloc_observer.dart';
@@ -26,10 +25,6 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider<NavigationCubit>(
           create: (context) => NavigationCubit(),
-        ),
-
-        BlocProvider<SlidesNavigationCubit>(
-          create: (context) => SlidesNavigationCubit(),
         ),
       ],
       child: MaterialApp(

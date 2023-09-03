@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:litterflow_app/logic/cubits/slides_cubit/slides_navigation_cubit.dart';
+import 'package:litterflow_app/presentation/widgets/guide/first_carousel_slide.dart';
+import 'package:litterflow_app/presentation/widgets/guide/second_carousel_slide.dart';
+import 'package:litterflow_app/presentation/widgets/guide/third_carousel_slide.dart';
 import '../../../constants/colors.dart';
 
 class ImageSwipe extends StatefulWidget {
-  const ImageSwipe({
+  final List<Widget> _slides = [
+    const FirstSlide(),
+    const SecondSlide(),
+    const ThirdSlide(),
+  ];
+
+  ImageSwipe({
     Key? key,
   }) : super(key: key);
 
@@ -13,6 +20,13 @@ class ImageSwipe extends StatefulWidget {
 }
 
 class _ImageSwipeState extends State<ImageSwipe> {
+  final PageController _pageController = PageController(initialPage: 0);
+
+  @override
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -29,71 +43,63 @@ class _ImageSwipeState extends State<ImageSwipe> {
         ],
       ),
       height: 300,
-      child: BlocConsumer<SlidesNavigationCubit, SlidesNavigationState>(
-        listener: (context, state) {},
-        builder: (context, state) {
-          return state is SlidesNavigationSuccess
-              ? Column(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Expanded(
+            child: PageView(
+              controller: _pageController,
+              scrollDirection: Axis.horizontal,
+              children: widget._slides,
+              onPageChanged: (index) {
+                setState(() {
+                  _pageController.animateToPage(
+                    index,
+                    duration: const Duration(milliseconds: 300),
+                    curve: Curves.easeOutCubic,
+                  );
+                });
+              },
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 16.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Expanded(
-                      child: PageView(
-                        controller:state.pageController,
-                        scrollDirection: Axis.horizontal,
-                        onPageChanged: (value) {
-                          state.pageController.animateToPage(
-                            value,
-                            duration: const Duration(milliseconds: 300),
+                    for (int i = 0; i < widget._slides.length; i++)
+                      FutureBuilder(
+                        future: Future.value(true),
+                        builder: (context, snapshot) {
+                          if (!snapshot.hasData) {
+                            return Container();
+                          }
+                          return AnimatedContainer(
+                            duration: const Duration(
+                              milliseconds: 300,
+                            ),
                             curve: Curves.easeOutCubic,
+                            margin: const EdgeInsets.symmetric(
+                              horizontal: 2,
+                            ),
+                            width: _pageController.page?.round() == i ? 20 : 6,
+                            height: 6,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(12),
+                              color: AppColors.kSecondaryColor,
+                            ),
                           );
-                          BlocProvider.of<SlidesNavigationCubit>(context)
-                              .changePage(pageController: state.pageController);
                         },
-                        children:
-                          state.pages,
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 16.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              for (int i = 0; i < state.pages.length; i++)
-                                FutureBuilder(
-                                  future: Future.value(true),
-                                  builder: (context,snapshot){
-                                    if (!snapshot.hasData) {
-                                      return Container();
-                                    }
-                                    return AnimatedContainer(
-                                      duration: const Duration(
-                                        milliseconds: 300,
-                                      ),
-                                      curve: Curves.easeOutCubic,
-                                      margin: const EdgeInsets.symmetric(
-                                        horizontal: 2,
-                                      ),
-                                      width: state.pageController.page?.round() == i ? 20 : 6,
-                                      height: 6,
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(12),
-                                        color: AppColors.kSecondaryColor,
-                                      ),
-                                    );
-                                  }
-                                ),
-                            ],
-                          ),
-                        ],
-                      ),
-                    )
                   ],
-                )
-              : const Center(child: CircularProgressIndicator());
-        },
+                ),
+              ],
+            ),
+          )
+        ],
       ),
     );
   }

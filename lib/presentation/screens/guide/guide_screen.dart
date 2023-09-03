@@ -18,13 +18,13 @@ class GuideScreen extends StatelessWidget {
               width: double.infinity,
               fit: BoxFit.cover,
             ),
-            const Positioned(
+             Positioned(
               left: 0,
               right: 0,
               bottom: 0,
               top: 0,
               child: Padding(
-                padding: EdgeInsets.symmetric(vertical: 100.0, horizontal: 30),
+                padding: const EdgeInsets.symmetric(vertical: 100.0, horizontal: 30),
                 child: ImageSwipe(),
               ),
             ),
