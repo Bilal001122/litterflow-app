@@ -84,6 +84,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar>
                         onTap: () {
                           BlocProvider.of<NavigationCubit>(context)
                               .updateIndex(index: 1);
+                          Navigator.pushNamed(context, '/scan');
                         },
                         child: Container(
                           height: 60,

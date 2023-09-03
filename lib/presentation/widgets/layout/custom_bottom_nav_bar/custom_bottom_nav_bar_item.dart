@@ -74,7 +74,7 @@ class CustomBottomNavBarItemPainter extends CustomPainter {
   final double radiusController;
 
   CustomBottomNavBarItemPainter(
-      {required this.opacity, required this.radiusController});
+      {required this.opacity, required this.radiusController,});
 
   @override
   void paint(Canvas canvas, Size size) {
