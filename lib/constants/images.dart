@@ -19,3 +19,7 @@ class GuideImages {
   static const String thirdSlideImage1 = 'assets/images/note.svg';
   static const String thirdSlideImage2 = 'assets/images/flower.png';
 }
+
+class ScanImages {
+  static const String logoWhite = 'assets/images/logo_white.svg';
+}

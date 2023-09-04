@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:litterflow_app/constants/colors.dart';
-import 'package:litterflow_app/logic/cubits/navigation_cubit/navigation_cubit.dart';
+import '../../../../logic/cubits/layout/navigation_cubit/navigation_cubit.dart';
 
 class CustomBottomNavBarItem extends StatelessWidget {
   final NavigationSuccess state;

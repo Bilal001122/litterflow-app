@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:litterflow_app/logic/cubits/navigation_cubit/navigation_cubit.dart';
 import '../../../../constants/colors.dart';
 import '../../../../constants/icons.dart';
 import '../../../../constants/strings.dart';
+import '../../../../logic/cubits/layout/navigation_cubit/navigation_cubit.dart';
 import 'custom_bottom_nav_bar_item.dart';
 
 class CustomBottomNavigationBar extends StatefulWidget {

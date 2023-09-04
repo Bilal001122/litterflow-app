@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:litterflow_app/constants/colors.dart';
-import '../../../logic/cubits/navigation_cubit/navigation_cubit.dart';
+import 'package:litterflow_app/logic/cubits/layout/navigation_cubit/navigation_cubit.dart';
 import '../../widgets/layout/custom_bottom_nav_bar/custom_bottom_nav_bar.dart';
 import '../home/home_screen.dart';
 
