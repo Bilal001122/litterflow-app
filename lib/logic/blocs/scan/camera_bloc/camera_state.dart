@@ -23,20 +23,4 @@ class CameraErrorState extends CameraState {
   });
 }
 
-class CameraTakePictureLoadingState extends CameraState {}
 
-class CameraTakePictureSuccessState extends CameraState {
-  final XFile image;
-
-  CameraTakePictureSuccessState({
-    required this.image,
-  });
-}
-
-class CameraTakePictureErrorState extends CameraState {
-  final String errorMessage;
-
-  CameraTakePictureErrorState({
-    required this.errorMessage,
-  });
-}

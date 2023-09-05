@@ -16,7 +16,6 @@ class CameraBloc extends Bloc<CameraEvent, CameraState> {
 
   CameraBloc() : super(CameraInitial()) {
     on<InitializeCameraEvent>(initializeCameraEvent);
-    on<TakePictureEvent>(takePictureEvent);
   }
 
   FutureOr<void> initializeCameraEvent(
@@ -39,18 +38,6 @@ class CameraBloc extends Bloc<CameraEvent, CameraState> {
     }
   }
 
-  FutureOr<void> takePictureEvent(TakePictureEvent event, Emitter<CameraState> emit) async {
-    emit(CameraTakePictureLoadingState());
-    try {
-      final image = await _controller.takePicture();
-      emit(CameraTakePictureSuccessState(image: image));
-    } catch (error) {
-      if (kDebugMode) {
-        print('The error :${error.toString()}');
-      }
-      emit(CameraTakePictureErrorState(errorMessage: error.toString()));
-    }
-  }
 
   Future<void> _initializeCamera() async {
     if (await Permission.camera.request().isGranted) {
