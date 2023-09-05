@@ -4,3 +4,5 @@ part of 'camera_bloc.dart';
 abstract class CameraEvent {}
 
 class InitializeCameraEvent extends CameraEvent {}
+
+class TakePictureEvent extends CameraEvent {}

@@ -16,6 +16,7 @@ class CameraBloc extends Bloc<CameraEvent, CameraState> {
 
   CameraBloc() : super(CameraInitial()) {
     on<InitializeCameraEvent>(initializeCameraEvent);
+    on<TakePictureEvent>(takePictureEvent);
   }
 
   FutureOr<void> initializeCameraEvent(
@@ -35,6 +36,19 @@ class CameraBloc extends Bloc<CameraEvent, CameraState> {
         print('The error :${error.toString()}');
       }
       emit(CameraErrorState(errorMessage: error.toString()));
+    }
+  }
+
+  FutureOr<void> takePictureEvent(TakePictureEvent event, Emitter<CameraState> emit) async {
+    emit(CameraTakePictureLoadingState());
+    try {
+      final image = await _controller.takePicture();
+      emit(CameraTakePictureSuccessState(image: image));
+    } catch (error) {
+      if (kDebugMode) {
+        print('The error :${error.toString()}');
+      }
+      emit(CameraTakePictureErrorState(errorMessage: error.toString()));
     }
   }
 
@@ -61,4 +75,6 @@ class CameraBloc extends Bloc<CameraEvent, CameraState> {
     _controller.dispose();
     return super.close();
   }
+
+
 }

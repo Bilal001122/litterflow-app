@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:litterflow_app/presentation/screens/home/home_screen.dart';
+import 'package:litterflow_app/presentation/screens/image_show/image_show_screen.dart';
 import 'package:litterflow_app/presentation/screens/layout/app_layout.dart';
 import 'package:litterflow_app/presentation/screens/splash/splash_screen.dart';
 import '../screens/guide/guide_screen.dart';
@@ -27,6 +28,10 @@ class AppRouter {
       case '/scan':
         return MaterialPageRoute(
           builder: (_) => const ScanScreen(),
+        );
+      case '/image_show':
+        return MaterialPageRoute(
+          builder: (_) => const ImageShowScreen(),
         );
       default:
         return MaterialPageRoute(
