@@ -6,7 +6,6 @@ import 'package:litterflow_app/logic/cubits/scan/take_picture_cubit/take_picture
 import 'package:litterflow_app/logic/cubits/scan/zoom_cubit/zoom_cubit.dart';
 import 'package:litterflow_app/presentation/app_router/app_router.dart';
 import 'package:litterflow_app/presentation/screens/scan/scan_screen.dart';
-import 'package:litterflow_app/presentation/screens/splash/splash_screen.dart';
 import 'logic/bloc_observer.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'logic/blocs/scan/camera_bloc/camera_bloc.dart';

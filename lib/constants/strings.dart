@@ -63,8 +63,8 @@ class ScanStrings {
 
   static const String rotateRightButton = 'Droite';
   static const String rotateLeftButton = 'Gauche';
-  static const String frameButton = 'Recadrer';
-  static const String continueButton = 'Continuer';
+  static const String frameButton = 'Encadrer';
+  static const String continueButton = 'Suivant';
   static const String sendButton = 'Envoyer';
 
   // Garbage Type

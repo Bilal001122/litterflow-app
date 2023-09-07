@@ -22,4 +22,7 @@ class GuideImages {
 
 class ScanImages {
   static const String logoWhite = 'assets/images/logo_white.svg';
+  static const String logoBlue = 'assets/images/logo_blue.svg';
+  static const String waveImage =
+      'assets/images/wave_image.svg';
 }
