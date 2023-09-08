@@ -40,7 +40,7 @@ class CameraBloc extends Bloc<CameraEvent, CameraState> {
 
 
   Future<void> _initializeCamera() async {
-    if (await Permission.camera.request().isGranted) {
+    if (await Permission.camera.request().isGranted && await Permission.location.request().isGranted) {
       _cameras = await availableCameras();
       if (_cameras.isEmpty) {
         _isCameraInitialized = false;

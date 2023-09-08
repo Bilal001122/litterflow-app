@@ -29,7 +29,7 @@ class CustomBottomSheet extends StatelessWidget {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.start,
-              children:  const [
+              children:   const [
                 BigTitle(
                   title: ScanStrings.typeTitle,
                   subTitle: ScanStrings.typeSubTitle,

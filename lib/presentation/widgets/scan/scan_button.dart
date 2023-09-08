@@ -51,7 +51,7 @@ class ScanButton extends StatelessWidget {
                                 ),
                                 backgroundColor: AppColors.kPrimaryColor,
                                 content: Text('En cours de traitement...'),
-                                duration: Duration(seconds: 1),
+                                duration: Duration(seconds: 2),
                               ),
                             );
                             await BlocProvider.of<TakePictureCubit>(context)

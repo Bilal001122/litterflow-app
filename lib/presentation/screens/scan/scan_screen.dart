@@ -46,30 +46,35 @@ class _ScanScreenState extends State<ScanScreen> {
                 ? Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Stack(
-                        children: [
-                          CameraPreview(
-                            state.controller,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              IconButton(
-                                onPressed: () {
-                                  Navigator.pop(context);
-                                },
-                                icon: const Icon(
-                                  Icons.close,
-                                  color: AppColors.kWhiteColor,
+                      Expanded(
+                        flex: 5,
+                        child: Stack(
+                          children: [
+                            Center(
+                              child: CameraPreview(
+                                state.controller,
+                              ),
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                IconButton(
+                                  onPressed: () {
+                                    Navigator.pop(context);
+                                  },
+                                  icon: const Icon(
+                                    Icons.close,
+                                    color: AppColors.kWhiteColor,
+                                  ),
                                 ),
-                              ),
-                              SvgPicture.asset(
-                                ScanImages.logoWhite,
-                              ),
-                              FlashButton(cameraSuccessState: state,),
-                            ],
-                          ),
-                        ],
+                                SvgPicture.asset(
+                                  ScanImages.logoWhite,
+                                ),
+                                FlashButton(cameraSuccessState: state,),
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
                       Expanded(
                         child: Column(

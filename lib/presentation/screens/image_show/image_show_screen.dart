@@ -2,7 +2,6 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:litterflow_app/constants/colors.dart';
-
 import 'package:litterflow_app/logic/cubits/scan/take_picture_cubit/take_picture_cubit.dart';
 import 'package:litterflow_app/presentation/widgets/image_show/custom_app_bar.dart';
 import 'package:litterflow_app/presentation/widgets/image_show/footer_row.dart';
