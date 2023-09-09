@@ -28,3 +28,14 @@ class MyIcons {
   static const IconData phone = IconData(0xe805, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData scan = IconData(0xe807, fontFamily: _kFontFam, fontPackage: _kFontPkg);
 }
+
+class MyFlutterApp {
+  MyFlutterApp._();
+
+  static const _kFontFam = 'MyFlutterApp';
+  static const String? _kFontPkg = null;
+
+  //static const IconData keyboard_arrow_up = IconData(0xe800, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData angleUp = IconData(0xf106, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData angleDown = IconData(0xf107, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+}

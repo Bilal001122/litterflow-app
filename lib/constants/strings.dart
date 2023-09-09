@@ -89,7 +89,7 @@ class ScanStrings {
 }
 
 class HelpStrings {
-  static const String helpTitle = 'FaQ';
+  static const String helpTitle = '?FaQ?';
 
   // Questions and Answers
   static const List<Map<String, String>> questionAnswers = [
@@ -109,6 +109,11 @@ class HelpStrings {
       'question': 'Les signalements fonctionnent-ils hors ligne ?',
       'answer':
           'Certaines fonctionnalités de l\'application peuvent fonctionner hors ligne, mais pour une utilisation optimale, il est recommandé d\'avoir une connexion internet pour transmettre les signalements.'
+    },
+    {
+      'question': 'Comment protéger la confidentialité de mes informations tout en signalant des déchets ?',
+      'answer':
+      'L\’application vous permet de signaler et d’identifier manuellement les déchets flottants que vous repérez sur la surface de l\’eau. Vous prenez une photo de l\’objet et fournissez des détails sur le type de déchet.'
     },
     {
       'question':

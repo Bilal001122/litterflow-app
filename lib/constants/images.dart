@@ -1,5 +1,7 @@
 class GlobalImages {
   static const String logo = 'assets/images/Litterflow_with_colors.svg';
+  static const String homeIcon = 'assets/images/impactIcon.svg';
+
 }
 
 class SplashImages {
@@ -18,4 +20,11 @@ class GuideImages {
 
   static const String thirdSlideImage1 = 'assets/images/note.svg';
   static const String thirdSlideImage2 = 'assets/images/flower.png';
+}
+
+class HelpImages {
+  static const String upperWave = 'assets/images/aide_upper_wave.svg';
+  static const String lowerWave = 'assets/images/aide_lower_wave.svg';
+  static const String faqIcon = 'assets/images/faqIcon.svg';
+  static const String line = 'assets/images/Line.svg';
 }

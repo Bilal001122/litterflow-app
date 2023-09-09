@@ -26,6 +26,7 @@ class _ImageSwipeState extends State<ImageSwipe> {
   void dispose() {
     _pageController.dispose();
     super.dispose();
+
   }
 
   @override
