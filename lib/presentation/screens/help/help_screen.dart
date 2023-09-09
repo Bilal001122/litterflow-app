@@ -24,7 +24,7 @@ class HelpScreen extends StatelessWidget {
                         right: 0,
                         top: 10,
                         child: Container(
-                          margin: EdgeInsets.only(top: 20.0),
+                          margin: const EdgeInsets.only(top: 20.0),
                           child: SvgPicture.asset(
                             HelpImages.upperWave,
                           ),
@@ -52,15 +52,13 @@ class HelpScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-
               ),
-
               Expanded(
                 flex: 3,
                 child: ListView.builder(
                   shrinkWrap: true,
                   itemCount: HelpStrings.questionAnswers.length,
-                  padding: EdgeInsets.all(10.0),
+                  padding: const EdgeInsets.all(10.0),
                   itemBuilder: (context, index){
                     return Card(
                       shape: const RoundedRectangleBorder(
@@ -92,7 +90,7 @@ class HelpScreen extends StatelessWidget {
                         //shape:
                         title: Text(
                           HelpStrings.questionAnswers.elementAt(index).values.elementAt(0).toString(),
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: AppColors.kSecondaryColor,
                             fontFamily: 'MontserratAlternates',
                             fontSize: 10.0,
@@ -113,7 +111,7 @@ class HelpScreen extends StatelessWidget {
                                 padding: const EdgeInsets.all(8.0),
                                 child: Text(
                                   HelpStrings.questionAnswers.elementAt(index).values.elementAt(1).toString(),
-                                  style : TextStyle(
+                                  style : const TextStyle(
                                     color: AppColors.kSecondaryColor,
                                     fontFamily: 'Montserrat',
                                     fontSize: 10.0,
@@ -150,7 +148,7 @@ class HelpScreen extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(left: 15.0),
+                      margin: const EdgeInsets.only(left: 15.0),
                       //padding: EdgeInsets.symmetric(horizontal: 22, vertical: 11),
                       decoration: BoxDecoration(
                         boxShadow: [
@@ -198,7 +196,7 @@ class HelpScreen extends StatelessWidget {
                     Row(
                       children: [
                         Container(
-                          margin: EdgeInsets.all(10.0),
+                          margin: const EdgeInsets.all(10.0),
                           child: const Icon(
                             MyIcons.gmail,
                             size: 10.0,
@@ -218,7 +216,7 @@ class HelpScreen extends StatelessWidget {
                     Row(
                       children: [
                         Container(
-                          margin: EdgeInsets.all(5.0),
+                          margin: const EdgeInsets.all(5.0),
                           child: const Icon(
                             MyIcons.phone,
                             size: 10.0,
