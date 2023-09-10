@@ -31,6 +31,10 @@ class SlidesStrings {
 }
 
 class HomeStrings {
+
+  static const String title = 'Notre Impact';
+  static const String quantity = 'Quantité Collectée';
+  static const String alertes = 'Nombre d\'alertes';
   // First Carousel
   static const String carousel1Title = 'Qui sommes nous?';
   static const String carousel1Subtitle =

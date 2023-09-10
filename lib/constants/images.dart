@@ -1,6 +1,8 @@
 class GlobalImages {
   static const String logo = 'assets/images/Litterflow_with_colors.svg';
   static const String homeIcon = 'assets/images/impactIcon.svg';
+  static const String homeBack = 'assets/images/homeBack.svg';
+
 
 }
 

@@ -167,7 +167,9 @@ class HelpScreen extends StatelessWidget {
                             borderRadius: BorderRadius.circular(10),
                           ),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/guide');
+                        },
                         child: const Padding(
                           padding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 6.0),
                           child: Text(
