@@ -93,29 +93,32 @@ class _CustomRadioButtonsState extends State<CustomRadioButtons> {
                         ),
                       ],
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Radio(
-                          value: '> 20',
-                          groupValue: state.quantity,
-                          activeColor: AppColors.kSecondaryColor,
-                          fillColor: MaterialStateProperty.all<Color>(
-                              AppColors.kSecondaryColor),
-                          onChanged: (value) {
-                            BlocProvider.of<QuantityCubit>(context)
-                                .quantityClicked(value.toString());
-                          },
-                        ),
-                        const Text(
-                          '> 20',
-                          style: TextStyle(
-                            fontSize: 12.0,
-                            fontWeight: FontWeight.w500,
-                            color: AppColors.kSecondaryColor,
+                    Padding(
+                      padding: const EdgeInsets.only(right: 8.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Radio(
+                            value: '> 20',
+                            groupValue: state.quantity,
+                            activeColor: AppColors.kSecondaryColor,
+                            fillColor: MaterialStateProperty.all<Color>(
+                                AppColors.kSecondaryColor),
+                            onChanged: (value) {
+                              BlocProvider.of<QuantityCubit>(context)
+                                  .quantityClicked(value.toString());
+                            },
                           ),
-                        ),
-                      ],
+                          const Text(
+                            '> 20',
+                            style: TextStyle(
+                              fontSize: 12.0,
+                              fontWeight: FontWeight.w500,
+                              color: AppColors.kSecondaryColor,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),

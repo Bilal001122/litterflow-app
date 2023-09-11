@@ -3,21 +3,23 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:litterflow_app/constants/colors.dart';
 import 'package:litterflow_app/logic/blocs/scan/camera_bloc/camera_bloc.dart';
 import 'package:litterflow_app/logic/cubits/scan/flash_cubit/flash_cubit.dart';
+import 'package:loading_animation_widget/loading_animation_widget.dart';
 import '../../../logic/cubits/scan/take_picture_cubit/take_picture_cubit.dart';
 
-class ScanButton extends StatelessWidget {
+class ScanButton extends StatefulWidget {
   const ScanButton({
     super.key,
   });
 
   @override
+  State<ScanButton> createState() => _ScanButtonState();
+}
+
+class _ScanButtonState extends State<ScanButton> {
+  @override
   Widget build(BuildContext context) {
     return BlocConsumer<TakePictureCubit, TakePictureState>(
-      listener: (context, state) {
-        if (state is CameraTakePictureSuccessState) {
-          Navigator.pushNamed(context, '/image_show');
-        }
-      },
+      listener: (context, state) {},
       builder: (context, state) {
         return BlocConsumer<CameraBloc, CameraState>(
           listener: (context, state) {},
@@ -54,13 +56,17 @@ class ScanButton extends StatelessWidget {
                                 duration: Duration(seconds: 2),
                               ),
                             );
+                            final image = await state.controller.takePicture();
+                            if (!mounted) return;
                             await BlocProvider.of<TakePictureCubit>(context)
-                                .takePicture(controller: state.controller);
-
+                                .takePicture(image: image);
+                            if (!mounted) return;
                             await BlocProvider.of<FlashCubit>(context)
                                 .changeFlash(
                                     isFlashOn: false,
                                     controller: state.controller);
+                            if (!mounted) return;
+                            Navigator.pushNamed(context, '/image_show');
                           },
                           splashColor: AppColors.kPrimaryColor.withOpacity(0.2),
                           customBorder: const CircleBorder(),
@@ -77,8 +83,9 @@ class ScanButton extends StatelessWidget {
                       ),
                     ),
                   )
-                : const Center(
-                    child: CircularProgressIndicator(),
+                : Center(
+                    child: LoadingAnimationWidget.staggeredDotsWave(
+                        color: AppColors.kPrimaryColor, size: 30),
                   );
           },
         );

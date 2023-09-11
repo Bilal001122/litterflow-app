@@ -22,5 +22,3 @@ class CameraErrorState extends CameraState {
     required this.errorMessage,
   });
 }
-
-

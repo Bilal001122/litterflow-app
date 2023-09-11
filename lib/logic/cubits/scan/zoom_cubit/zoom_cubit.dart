@@ -7,8 +7,8 @@ part 'zoom_state.dart';
 class ZoomCubit extends Cubit<ZoomState> {
   ZoomCubit() : super(ZoomInitial());
 
-  void changeZoom(int zoom, CameraController cameraController) {
-    cameraController.setZoomLevel(zoom.toDouble());
+  Future<void> changeZoom(int zoom, CameraController cameraController) async {
+    await cameraController.setZoomLevel(zoom.toDouble());
     emit(ZoomSuccess(zoom));
   }
 }
