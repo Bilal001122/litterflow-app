@@ -2,9 +2,15 @@ class GlobalImages {
   static const String logo = 'assets/images/Litterflow_with_colors.svg';
   static const String homeIcon = 'assets/images/impactIcon.svg';
   static const String homeBack = 'assets/images/homeBack.svg';
+  static const String wave1 = 'assets/images/home_wave1.svg';
+  static const String wave2 = 'assets/images/home_wave2.svg';
+  static const String logoWhite = 'assets/images/WhiteLogo.svg';
+  static const String wLine = 'assets/images/WhiteLine.svg';
 
 
 }
+
+
 
 class SplashImages {
   static const String bigWaveLightBlue =

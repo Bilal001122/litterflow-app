@@ -4,6 +4,8 @@ import 'package:litterflow_app/constants/colors.dart';
 import 'package:litterflow_app/constants/images.dart';
 import 'package:litterflow_app/constants/strings.dart';
 
+import '../../widgets/home/home_carroussel.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -20,7 +22,31 @@ class HomeScreen extends StatelessWidget {
                     color: AppColors.kSecondaryColor,
                   ),
                   width: double.infinity,
-                  //color: AppColors.kSecondaryColor,
+                  child: Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      Positioned(
+                        top : 20,
+
+                        child: SvgPicture.asset(
+                          GlobalImages.logoWhite,
+                        ),
+                      ),
+                      Positioned(
+                          child: HomeCarroussel(),
+                      ),
+                      Positioned(
+                        left: 0,
+                        top: 50,
+                        child: SvgPicture.asset(GlobalImages.wave1),
+                      ),
+                      Positioned(
+                        right: 0,
+                        bottom: 5,
+                        child: SvgPicture.asset(GlobalImages.wave2),
+                      ),
+                    ],
+                  ),
                 ),
 
               ),
