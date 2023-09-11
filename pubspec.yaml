@@ -98,4 +98,7 @@ flutter:
     - family: MyIcons
       fonts:
         - asset: assets/fonts/MyIcons.ttf
+    - family: MyFlutterApp
+      fonts:
+        - asset: assets/fonts/MyFlutterApp.ttf
 

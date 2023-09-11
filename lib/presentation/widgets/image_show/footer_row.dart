@@ -58,7 +58,7 @@ class _FooterRowState extends State<FooterRow> {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 10.0),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Column(
             children: [
