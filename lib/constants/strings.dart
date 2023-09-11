@@ -63,8 +63,9 @@ class ScanStrings {
 
   static const String rotateRightButton = 'Droite';
   static const String rotateLeftButton = 'Gauche';
-  static const String frameButton = 'Recadrer';
-  static const String continueButton = 'Continuer';
+  static const String cancelButton = 'Effacer';
+  static const String saveButton = 'Enregistrer';
+  static const String continueButton = 'Suivant';
   static const String sendButton = 'Envoyer';
 
   // Garbage Type
@@ -85,7 +86,7 @@ class ScanStrings {
   // Thanks message
   static const String thanksMessageTitle = 'Merci!';
   static const String thanksMessageSubTitle =
-      'Merci pour avoir signalé les déchets. Votre contribution compte beaucoup pour nous!';
+      'Merci pour avoir signalé les déchets.\nVotre contribution\ncompte beaucoup pour\nnous!';
 }
 
 class HelpStrings {
