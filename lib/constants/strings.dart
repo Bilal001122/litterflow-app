@@ -68,6 +68,7 @@ class ScanStrings {
   static const String rotateRightButton = 'Droite';
   static const String rotateLeftButton = 'Gauche';
   static const String cancelButton = 'Effacer';
+  static const String backButton = 'Annuler';
   static const String saveButton = 'Enregistrer';
   static const String continueButton = 'Suivant';
   static const String sendButton = 'Envoyer';

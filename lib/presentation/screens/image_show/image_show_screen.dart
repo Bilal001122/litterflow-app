@@ -30,10 +30,23 @@ class _ImageShowScreenState extends State<ImageShowScreen> {
   Rect? currentRectangle;
   Offset? startPoint;
   final GlobalKey repaintKey = GlobalKey();
+  bool isFirstTime = true;
 
   void _clearRectangles(List<DrawnRectangle> drawnRectangles) {
     setState(() {
       drawnRectangles.clear();
+    });
+  }
+
+  void _deleteLastRectangle(List<DrawnRectangle> drawnRectangles) {
+    setState(() {
+      if (drawnRectangles.isNotEmpty) {
+        if (isFirstTime) {
+          drawnRectangles.removeLast();
+          isFirstTime = false;
+        }
+        drawnRectangles.removeLast();
+      }
     });
   }
 
@@ -89,6 +102,9 @@ class _ImageShowScreenState extends State<ImageShowScreen> {
                                   if (drawnRectangles.isNotEmpty) {
                                     drawnRectangles.removeLast();
                                   }
+                                  if (drawnRectangles.isEmpty) {
+                                    isFirstTime = true;
+                                  }
                                   drawnRectangles.add(
                                     DrawnRectangle(
                                       currentRectangle!,
@@ -129,6 +145,7 @@ class _ImageShowScreenState extends State<ImageShowScreen> {
                         drawnRectangles: drawnRectangles,
                         repaintKey: repaintKey,
                         saveImageWithRectangles: saveImageWithRectangles,
+                        deleteLastRectangle: _deleteLastRectangle,
                       ),
                     ],
                   )
