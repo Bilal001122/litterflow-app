@@ -38,27 +38,27 @@ class HomeStrings {
   // First Carousel
   static const String carousel1Title = 'Qui sommes nous?';
   static const String carousel1Subtitle =
-      'LitterFlow est une startup engagée dans la préservation des écosystèmes marins.\nNous fusionnons la technologie avec la participation citoyenne.';
+      'LitterFlow est une startup\nengagée dans la\npréservation des\nécosystèmes marins.\n\nNous fusionnons la\ntechnologie avec la\nparticipation citoyenne.';
 
   // Second Carousel
   static const String carousel2Title = 'Qui sommes nous?';
   static const String carousel2Subtitle =
-      'En permettant aux citoyens de signaler les déchets flottants dans les ports.\nNotre équipe intervient ensuite pour les collecter et sensibiliser le public à la préservation de l’environnement marin.';
+      'En permettant aux\ncitoyens de signaler les\ndéchets flottants dans les\nports.\nNotre équipe intervient\nensuite pour les collecter\net sensibiliser le public à la\npréservation de\nl’environnement marin.';
 
   // Third Carousel
   static const String carousel3Title = 'Pourquoi contribuer?';
   static const String carousel3Subtitle =
-      'Votre action dans la lutte contre les déchets flottants contribue directement à la protection de la biodiversité côtière et à la sauvegarde de nos écosystèmes marins pour les générations futures.';
+      'Votre action dans la lutte\ncontre les déchets\nflottants contribue\ndirectement à la\nprotection de la\nbiodiversité côtière et à la\nsauvegarde de nos\nécosystèmes marins pour\nles générations futures.';
 
   // Fourth Carousel
   static const String carousel4Title = 'Pourquoi contribuer?';
   static const String carousel4Subtitle =
-      'La préservation de nos ports est essentiel pour maintenir un environnement côtier propre et préserver la vie marine. Rejoignez-nous pour un impact positif et durable sur nos côtes.';
+      'La préservation de nos\nports est essentiel pour\nmaintenir un\nenvironnement côtier\npropre et préserver la vie\nmarine.\nRejoignez-nous pour un\nimpact positif et durable\nsur nos côtes.';
 
   // Fifth Carousel
   static const String carousel5Title = 'Comment contribuer?';
   static const String carousel5Subtitle =
-      'Agissez pour un Port Propre. Signalez leur présence facilement en prenant une photo via notre application mobile en un simple clic sur le bouton d\'en bas.';
+      'Agissez pour un Port\nPropre en contribuant à la\nlutte contre les déchets\nflottants.\nSignalez leur présence\nfacilement en prenant une\nphoto via notre application\nmobile en un simple clic\nsur le bouton d\'en bas.';
 }
 
 class ScanStrings {
@@ -118,7 +118,7 @@ class HelpStrings {
     {
       'question': 'Comment protéger la confidentialité de mes informations tout en signalant des déchets ?',
       'answer':
-      'L\’application vous permet de signaler et d’identifier manuellement les déchets flottants que vous repérez sur la surface de l\’eau. Vous prenez une photo de l\’objet et fournissez des détails sur le type de déchet.'
+      'L’application vous permet de signaler et d’identifier manuellement les déchets flottants que vous repérez sur la surface de l’eau. Vous prenez une photo de l’objet et fournissez des détails sur le type de déchet.'
     },
     {
       'question':
