@@ -50,8 +50,8 @@ class SecondSlide extends StatelessWidget {
               fontSize: 20,
             ),
           ),
-          SvgPicture.asset(
-            GuideImages.secondSlideImage1,
+          Image.asset(
+            GuideImages.secondSlideImage12,
             fit: BoxFit.fitWidth,
           ),
           const Text(

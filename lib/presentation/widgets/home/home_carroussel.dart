@@ -75,7 +75,7 @@ class _HomeCarrousselState extends State<HomeCarroussel> {
                   ),
                   Center(
                     child: Padding(
-                      padding: const EdgeInsets.only(left: 10.0, right: 10.0, top:10.0),
+                      padding: const EdgeInsets.only(left: 10.0, right: 10.0, top:15.0),
                       child: Text(
                         HomeCarroussel.subTitles.elementAt(i),
                         textAlign: TextAlign.center,

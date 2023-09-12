@@ -32,7 +32,7 @@ class HomeScreen extends StatelessWidget {
                           GlobalImages.logoWhite,
                         ),
                       ),
-                      Positioned(
+                      const Positioned(
                           child: HomeCarroussel(),
                       ),
                       Positioned(
@@ -51,7 +51,7 @@ class HomeScreen extends StatelessWidget {
 
               ),
               Padding(
-                padding: const EdgeInsets.all(15.0),
+                padding: const EdgeInsets.only(bottom: 15.0, top: 30,left: 15),
                 child: Row(
                   children: [
                     Padding(
@@ -74,9 +74,9 @@ class HomeScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     Container(
-                      padding: const EdgeInsets.all(10.0),
+                      padding: const EdgeInsets.all(15.0),
                       child: const Text(
-                        HomeStrings.quantity,
+                        HomeStrings.alertes,
                         style: TextStyle(
                           color: AppColors.kSecondaryColor,
                           fontWeight: FontWeight.w400,
@@ -85,7 +85,7 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      padding: const EdgeInsets.all(10.0),
+                      padding: const EdgeInsets.only(bottom: 40.0, top: 10),
                       child: const Text(
                         '00',
                         style: TextStyle(
@@ -95,7 +95,7 @@ class HomeScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Container(
+                    /*Container(
                       padding: const EdgeInsets.all(10.0),
                       child: const Text(
                         HomeStrings.alertes,
@@ -117,7 +117,7 @@ class HomeScreen extends StatelessWidget {
                           fontSize: 20,
                         ),
                       ),
-                    ),
+                    ),*/
                   ],
                 ),
               )
