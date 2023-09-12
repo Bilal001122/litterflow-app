@@ -23,7 +23,6 @@ class HomeCarousel extends StatefulWidget {
     Key? key,
   }) : super(key: key);
 
-
   @override
   State<HomeCarousel> createState() => _HomeCarouselState();
 }
@@ -35,7 +34,6 @@ class _HomeCarouselState extends State<HomeCarousel> {
   void dispose() {
     _pageController.dispose();
     super.dispose();
-
   }
 
   @override
@@ -69,17 +67,12 @@ class _HomeCarouselState extends State<HomeCarousel> {
                           fontSize: 15,
                           fontWeight: FontWeight.w600,
                           fontFamily: 'MontserratAlternates',
-
                         ),
                       ),
-
                     ),
                   ),
-
                   Center(
-
                     child: Container(
-                      margin: const EdgeInsets.only(bottom: 20.0),
                       color: AppColors.kWhiteColor,
                       width: 180,
                       height: 1,
@@ -95,7 +88,6 @@ class _HomeCarouselState extends State<HomeCarousel> {
                           color: AppColors.kWhiteColor.withOpacity(0.6),
                           fontSize: 15,
                           fontWeight: FontWeight.w400,
-                          //fontFamily: 'MontserratAlternates',
                         ),
                         softWrap: true,
                       ),

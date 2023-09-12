@@ -70,54 +70,35 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             Center(
-              child: Column(
-                children: [
-                  Container(
-                    padding: const EdgeInsets.all(10.0),
-                    child: const Text(
-                      HomeStrings.quantity,
-                      style: TextStyle(
-                        color: AppColors.kSecondaryColor,
-                        fontWeight: FontWeight.w400,
-                        fontSize: 15,
+              child: Container(
+                margin: const EdgeInsets.symmetric(vertical: 30),
+                child: Column(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.all(10.0),
+                      child: const Text(
+                        HomeStrings.alertes,
+                        style: TextStyle(
+                          color: AppColors.kSecondaryColor,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 15,
+                        ),
                       ),
                     ),
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(10.0),
-                    child: const Text(
-                      '00',
-                      style: TextStyle(
-                        color: AppColors.kSecondaryColor,
-                        fontWeight: FontWeight.w600,
-                        fontSize: 20,
+                    Container(
+                      padding: const EdgeInsets.all(10.0),
+                      margin: const EdgeInsets.only(bottom: 15),
+                      child: const Text(
+                        '00',
+                        style: TextStyle(
+                          color: AppColors.kSecondaryColor,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 20,
+                        ),
                       ),
                     ),
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(10.0),
-                    child: const Text(
-                      HomeStrings.alertes,
-                      style: TextStyle(
-                        color: AppColors.kSecondaryColor,
-                        fontWeight: FontWeight.w400,
-                        fontSize: 15,
-                      ),
-                    ),
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(10.0),
-                    margin: const EdgeInsets.only(bottom: 15),
-                    child: const Text(
-                      '00',
-                      style: TextStyle(
-                        color: AppColors.kSecondaryColor,
-                        fontWeight: FontWeight.w600,
-                        fontSize: 20,
-                      ),
-                    ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             )
           ],
