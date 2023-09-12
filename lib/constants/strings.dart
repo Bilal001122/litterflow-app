@@ -13,6 +13,8 @@ class SlidesStrings {
   // First Slide
   static const String slide1Title = 'Appuyez sur le\nboutton SCAN';
   static const String slide1Subtitle = 'Prenez votre Photo';
+  static const String slide1Subtitle2 = 'Et encadrez le differents déchets présents dans la photo';
+  static const String slide1Subtitle3 = 'Enfin, sauvegardez la photo!';
 
   // Second Slide
   static const String slide2Title =
