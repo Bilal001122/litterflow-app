@@ -14,6 +14,7 @@ import 'custom_bottom_sheet.dart';
 
 class FooterRow extends StatefulWidget {
   final Function(List<DrawnRectangle>) clearRectangles;
+  final Function(List<DrawnRectangle>) deleteLastRectangle;
   final List<DrawnRectangle> drawnRectangles;
   final GlobalKey repaintKey;
   final Function(GlobalKey) saveImageWithRectangles;
@@ -23,7 +24,7 @@ class FooterRow extends StatefulWidget {
     required this.clearRectangles,
     required this.drawnRectangles,
     required this.repaintKey,
-    required this.saveImageWithRectangles,
+    required this.saveImageWithRectangles, required this.deleteLastRectangle,
   });
 
   @override
@@ -60,6 +61,31 @@ class _FooterRowState extends State<FooterRow> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
+          Column(
+            children: [
+              IconButton(
+                style: IconButton.styleFrom(
+                  tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                ),
+                icon: const Icon(
+                  Icons.undo_outlined,
+                  size: 35,
+                  color: AppColors.kSecondaryColor,
+                ),
+                onPressed: () {
+                  widget.deleteLastRectangle(widget.drawnRectangles);
+                },
+              ),
+              const Text(
+                ScanStrings.backButton,
+                style: TextStyle(
+                  fontSize: 12.0,
+                  fontWeight: FontWeight.w500,
+                  color: AppColors.kSecondaryColor,
+                ),
+              ),
+            ],
+          ),
           Column(
             children: [
               IconButton(

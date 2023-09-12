@@ -18,16 +18,48 @@ class AppRouter {
           builder: (_) => const AppLayout(),
         );
       case '/guide':
-        return MaterialPageRoute(
-          builder: (_) => const GuideScreen(),
+        return PageRouteBuilder(
+          transitionDuration: const Duration(milliseconds: 300),
+          pageBuilder: (context, animation, secondaryAnimation) {
+            return const GuideScreen();
+          },
+          transitionsBuilder: (context, animation, secondaryAnimation, child) {
+            return SlideTransition(
+              position: animation.drive(
+                Tween(
+                  begin: const Offset(0.0, 1.0),
+                  end: Offset.zero,
+                ).chain(
+                  CurveTween(curve: Curves.ease),
+                ),
+              ),
+              child: child,
+            );
+          },
         );
       case '/home':
         return MaterialPageRoute(
           builder: (_) => const HomeScreen(),
         );
       case '/scan':
-        return MaterialPageRoute(
-          builder: (_) => const ScanScreen(),
+        return PageRouteBuilder(
+          transitionDuration: const Duration(milliseconds: 300),
+          pageBuilder: (context, animation, secondaryAnimation) {
+            return const ScanScreen();
+          },
+          transitionsBuilder: (context, animation, secondaryAnimation, child) {
+            return SlideTransition(
+              position: animation.drive(
+                Tween(
+                  begin: const Offset(0.0, 1.0),
+                  end: Offset.zero,
+                ).chain(
+                  CurveTween(curve: Curves.ease),
+                ),
+              ),
+              child: child,
+            );
+          },
         );
       case '/image_show':
         return MaterialPageRoute(

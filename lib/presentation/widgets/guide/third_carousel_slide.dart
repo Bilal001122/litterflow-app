@@ -59,6 +59,7 @@ class ThirdSlide extends StatelessWidget {
               Image.asset(
                 GuideImages.thirdSlideImage2,
                 fit: BoxFit.fitWidth,
+                height: 120,
               ),
             ],
           ),
