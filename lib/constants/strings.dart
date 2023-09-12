@@ -58,7 +58,7 @@ class HomeStrings {
   // Fifth Carousel
   static const String carousel5Title = 'Comment contribuer?';
   static const String carousel5Subtitle =
-      'Agissez pour un Port Propre en contribuant à la lutte contre les déchets flottants.Signalez leur présence facilement en prenant une photo via notre application mobile en un simple clic sur le bouton d\'en bas.';
+      'Agissez pour un Port Propre. Signalez leur présence facilement en prenant une photo via notre application mobile en un simple clic sur le bouton d\'en bas.';
 }
 
 class ScanStrings {
