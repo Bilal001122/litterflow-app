@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:litterflow_app/presentation/widgets/guide/first_carousel_slide.dart';
+import 'package:litterflow_app/presentation/widgets/guide/last_carousel_slide.dart';
 import 'package:litterflow_app/presentation/widgets/guide/second_carousel_slide.dart';
 import 'package:litterflow_app/presentation/widgets/guide/third_carousel_slide.dart';
 import '../../../constants/colors.dart';
@@ -7,6 +8,7 @@ import '../../../constants/colors.dart';
 class ImageSwipe extends StatefulWidget {
   final List<Widget> _slides = [
     const FirstSlide(),
+    const LastSlide(),
     const SecondSlide(),
     const ThirdSlide(),
   ];

@@ -77,7 +77,6 @@ class _SendButtonState extends State<SendButton> {
                         ),
                       ),
                       onPressed: () async {
-                        // todo: add internet connection check
                         BlocProvider.of<LoadingCubit>(context).loading();
                         List<double> coordinates =
                             await LocationService.getCurrentLocation();

@@ -3,6 +3,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:litterflow_app/constants/colors.dart';
 import 'package:litterflow_app/constants/images.dart';
 import 'package:litterflow_app/constants/strings.dart';
+import 'package:litterflow_app/data/firebase/firebase_service.dart';
+import 'package:loading_animation_widget/loading_animation_widget.dart';
 import '../../widgets/home/home_carousel.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -88,13 +90,26 @@ class HomeScreen extends StatelessWidget {
                     Container(
                       padding: const EdgeInsets.all(10.0),
                       margin: const EdgeInsets.only(bottom: 15),
-                      child: const Text(
-                        '00',
-                        style: TextStyle(
-                          color: AppColors.kSecondaryColor,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 20,
-                        ),
+                      child: FutureBuilder(
+                        future: FirebaseDataBase.getGarbageCount(),
+                        builder: (context, snapshot) {
+                          if (snapshot.hasData) {
+                            return Text(
+                              snapshot.data.toString(),
+                              style: const TextStyle(
+                                color: AppColors.kSecondaryColor,
+                                fontWeight: FontWeight.w600,
+                                fontSize: 20,
+                              ),
+                            );
+                          }
+                          return Center(
+                            child: LoadingAnimationWidget.staggeredDotsWave(
+                              color: AppColors.kPrimaryColor,
+                              size: 30,
+                            ),
+                          );
+                        },
                       ),
                     ),
                   ],

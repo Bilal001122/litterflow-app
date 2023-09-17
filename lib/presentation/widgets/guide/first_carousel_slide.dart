@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import '../../../constants/colors.dart';
 import '../../../constants/icons.dart';
 import '../../../constants/images.dart';
@@ -51,7 +50,6 @@ class FirstSlide extends StatelessWidget {
                 ),
                 Container(
                   padding: const EdgeInsets.all(12),
-                  
                   decoration: BoxDecoration(
                     color: AppColors.kPrimaryColor,
                     borderRadius: BorderRadius.circular(100),
@@ -64,43 +62,16 @@ class FirstSlide extends StatelessWidget {
               ],
             ),
           ),
+          Image.asset(
+            GuideImages.firstSlideImage,
+            //fit: BoxFit.cover,
+          ),
           const Text(
             SlidesStrings.slide1Subtitle,
             style: TextStyle(
               color: AppColors.kSecondaryColor,
-              fontWeight: FontWeight.w400,
-              fontSize: 15,
-            ),
-          ),
-          Container(
-            margin: const EdgeInsets.symmetric(vertical: 15, horizontal: 5),
-            width: 150,
-            height: 100,
-            child: Image.asset(
-              GuideImages.firstSlideImage,
-              //fit: BoxFit.cover,
-            ),
-          ),
-          const Text(
-            SlidesStrings.slide1Subtitle2,
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: AppColors.kSecondaryColor,
-              fontWeight: FontWeight.w400,
+              fontWeight: FontWeight.w500,
               fontSize: 20,
-
-            ),
-          ),
-          const Padding(
-            padding: EdgeInsets.only(top: 20.0),
-            child: Text(
-              SlidesStrings.slide1Subtitle3,
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: AppColors.kSecondaryColor,
-                fontWeight: FontWeight.w500,
-                fontSize: 20,
-              ),
             ),
           ),
         ],

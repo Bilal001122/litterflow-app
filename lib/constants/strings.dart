@@ -30,6 +30,10 @@ class SlidesStrings {
   static const String slide3Subtitle =
       'Et c’est tout, vous êtes prêt à utiliser LitteFlow!';
   static const String goButton = 'Go!';
+
+  // Last Slide
+  static const String lastSlideTitle = 'Sur la photo prise vous\npouvez encadrez les\ndéchets ';
+  static const String lastSlideSubtitle = 'L’encadrements des déchets\naidera le système à reconnaître\nles types des déchets\nautomatiquement dans le futur';
 }
 
 class HomeStrings {
