@@ -24,6 +24,8 @@ class GuideImages {
   static const String firstSlideImage = 'assets/images/first_slide.png';
   static const String firstSlide = 'assets/images/first_slide.svg';
 
+  static const String encadrerSlide = 'assets/images/encadrer_slide.png';
+
   static const String secondSlideImage1 = 'assets/images/second_slide1.svg';
   static const String secondSlideImage12 = 'assets/images/type.jpg';
   static const String secondSlideImage2 = 'assets/images/second_slide2.svg';

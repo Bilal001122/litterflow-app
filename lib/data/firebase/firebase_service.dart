@@ -35,4 +35,9 @@ class FirebaseDataBase {
     final String url = await downloadUrl.ref.getDownloadURL();
     await garbageCollection.doc(documentId).update({'image_url': url});
   }
+
+  static Future<int> getGarbageCount()  async {
+    QuerySnapshot snapshot = await garbageCollection.get();
+    return snapshot.docs.length;
+  }
 }
