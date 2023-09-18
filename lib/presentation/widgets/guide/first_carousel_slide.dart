@@ -62,9 +62,11 @@ class FirstSlide extends StatelessWidget {
               ],
             ),
           ),
-          Image.asset(
-            GuideImages.firstSlideImage,
-            //fit: BoxFit.cover,
+          Expanded(
+            child: Image.asset(
+              GuideImages.firstSlideImage,
+              //fit: BoxFit.cover,
+            ),
           ),
           const Text(
             SlidesStrings.slide1Subtitle,
