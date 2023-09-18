@@ -17,14 +17,15 @@ import 'logic/bloc_observer.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'logic/blocs/scan/camera_bloc/camera_bloc.dart';
 import 'logic/cubits/layout/navigation_cubit/navigation_cubit.dart';
-
+import 'package:flutter/services.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   Bloc.observer = MyBlocObserver();
   await CacheHelper.init();
   AppRouter appRouter = AppRouter();
-  runApp(MyApp(appRouter: appRouter));
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
+      .then((value) => runApp(MyApp(appRouter: appRouter),),);
 }
 
 class MyApp extends StatelessWidget {
