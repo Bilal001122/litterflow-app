@@ -1,4 +1,4 @@
-# README for litterflow app 
+# Litterflow App 
 
 ## Introduction
 
